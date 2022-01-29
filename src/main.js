@@ -13,19 +13,32 @@ import { instructors } from "../data/database.js";
 //     }
 // }
 
-const forEachExample = () => {
-    instructors.forEach(
-        (instructor) => {
-            console.log(`Instructor name: ${instructor.name}`);
-            console.log(`Instructor verve: ${instructor.verve}`);
-            console.log(`Instructor moxie: ${instructor.moxie}`);
-            if (instructor.jeNeSaisQuoi) {
-                console.log(`${instructor.name} has that je ne sais quoi that makes a great instructor`)
-            }
-            console.log("") // This just logs a blank line, so the output is a little more readable.
+// const forEachExample = () => {
+//     instructors.forEach(
+//         (instructor) => {
+//             console.log(`Instructor name: ${instructor.name}`);
+//             console.log(`Instructor verve: ${instructor.verve}`);
+//             console.log(`Instructor moxie: ${instructor.moxie}`);
+//             if (instructor.jeNeSaisQuoi) {
+//                 console.log(`${instructor.name} has that je ne sais quoi that makes a great instructor`)
+//             }
+//             console.log("") // This just logs a blank line, so the output is a little more readable.
+//         }
+//     )
+// }
+
+const forOfExample = () => {
+    for (const instructor of instructors) {
+        console.log(`Instructor name: ${instructor.name}`);
+        console.log(`Instructor verve: ${instructor.verve}`);
+        console.log(`Instructor moxie: ${instructor.moxie}`);
+        if (instructor.jeNeSaisQuoi) {
+            console.log(`${instructor.name} has that je ne sais quoi that makes a great instructor`)
         }
-    )
+        console.log("") // This just logs a blank line, so the output is a little more readable.
+    }
 }
 
 // basicForLoop();
-forEachExample();
+// forEachExample();
+forOfExample();
